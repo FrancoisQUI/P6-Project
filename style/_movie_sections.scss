@@ -1,0 +1,89 @@
+@use "variables";
+
+.film-group {
+  .container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    background-color: variables.$color-dark-bg;
+    scroll-margin: 0;
+    margin: 0;
+    padding: 0;
+    .arrow {
+      position: sticky;
+      width: variables.$arrow-width;
+      line-height: 300px;
+      height: 300px;
+      background-color: #ffffff77;
+      color: variables.$color-dark-bg;
+      font-size: 5em;
+      z-index: 25;
+      user-select: none;
+      transition-duration: 800ms;
+      &__left{
+        left: 0;
+      }
+      &__right{
+        right: 0;
+      }
+      &:hover{
+        background-color: variables.$color-dark-bg;
+        color: variables.$color-accent;
+      }
+    }
+    .film-container {
+      overflow: hidden;
+      display: inline-flex;
+      width: variables.$movie-card-width*7+variables.$arrow-width;
+      margin: 0;
+      padding: 0;
+      flex-shrink: 0;
+
+      &__movie-card {
+        z-index: 9;
+        position: relative;
+        width: variables.$movie-card-width;
+        height: variables.$movie-card-height;
+      }
+
+      &__movie-pic {
+        z-index: 11;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: variables.$movie-card-height*2/3;
+        margin: auto;
+      }
+
+      &__movie-back {
+        z-index: -1;
+        position: absolute;
+        width: variables.$movie-card-width;
+        height: variables.$movie-card-height;
+        top: 0;
+        left: 0;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+      }
+
+      &__movie-title {
+        position: absolute;
+        z-index: 11;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+        width: variables.$movie-card-width*4/5;
+        height: auto;
+        background-color: #00000faa;
+        color: variables.$color-light;
+        text-align: center;
+        line-height: 1.5rem;
+        overflow: visible;
+        margin: auto;
+      }
+    }
+  }
+
+}

@@ -112,7 +112,7 @@ function showModal(evt) {
 
             // Event de fermeture  de la modale si click sur le bouton
             modal.querySelector(".close-btn")
-                .addEventListener("click", evt => document.querySelector("#modal").remove())
+                .addEventListener("click", () => document.querySelector("#modal").remove())
             body.appendChild(modal)
 
         })

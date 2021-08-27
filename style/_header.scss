@@ -1,0 +1,27 @@
+.site-header {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+      padding: 0;
+      display: flex;
+      li {
+        text-decoration: none;
+        list-style: none;
+        padding: 1rem;
+      }
+    }
+  }
+
+  &__logo {
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+}
