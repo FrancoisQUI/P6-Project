@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Just Stream It</title>
+    <link rel="stylesheet" href="style/style.css">
+<!--    <script src="js/class/RequestMovies.js"></script>-->
+<!--    <script src="js/class/MovieClass.js"></script>-->
+<!--    <script src="js/main.js"></script>-->
+    <script async src="js/script.js"></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="site-header__logo">
+        <img src="https://fakeimg.pl/200/?text=Logo" alt="">
+    </div>
+    <nav class="site-header__nav">
+        <ul>
+            <li>Accueil</li>
+            <li>Catégories</li>
+        </ul>
+    </nav>
+</header>
+<section class="best-movie-pres">
+    <img src="https://picsum.photos/1280/1024" alt="movie picture" class="best-movie-pres__img-back">
+    <img src="https://picsum.photos/1280/1024" alt="movie picture" class="best-movie-pres__img-thumb">
+    <h1 class="best-movie-pres__title">Movie Title</h1>
+    <div class="best-movie-pres__button">Play</div>
+    <p class="best-movie-pres__abstract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aliquid
+        aperiam dignissimos dolore ducimus et harum illum iusto, modi, molestiae mollitia nesciunt quia quidem quod
+        ratione repellendus sunt unde voluptatum. Esse quo reiciendis saepe vero!</p>
+</section>
+
+
+
+<template id="movie-card-template">
+    <div class="film-container__movie-card">
+        <img src="" alt="" class="film-container__movie-pic">
+        <img src="" alt="" class="film-container__movie-back">
+        <h2 class="film-container__movie-title"></h2>
+    </div>
+</template>
+
+<template id="film-group-section-template">
+    <section class="film-group">
+        <h1 class="film-group_title"></h1>
+        <div class="container">
+            <div class="film-container">
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="modal-template">
+    <div id="modal">
+        <div class="close-btn">X</div>
+        <div class="modal__container"><h1 class="modal-movie_title">Lorem Ipsum</h1>
+            <div class="img">
+                <img src="" alt="">
+            </div>
+            <div class="modal__movie-info">
+                <h2>Movie Genres</h2>
+                <ul class="modal__movie-genres"></ul>
+                <h2>Release Date</h2>
+                <p class="modal__release-date"></p>
+                <h2>Rated</h2>
+                <p class="modal__rated"></p>
+                <h2>IMDB Score</h2>
+                <p class="modal__imdb"></p>
+                <h2>Director</h2>
+                <ul class="modal__director"></ul>
+                <h2>Actors</h2>
+                <ul class="modal__actors"></ul>
+                <h2>Duration</h2>
+                <p class="modal__duration"></p>
+                <h2>Countries</h2>
+                <ul class="modal__countries"></ul>
+                <h2>Gross Income</h2>
+                <ul>
+                    <li><h3>Usa</h3>
+                        <p class="modal__gross-usa"></p></li>
+                    <li><h3>World Wilde</h3>
+                        <p class="modal__gross-ww"></p></li>
+                </ul>
+                <h2>Description</h2>
+                <p class="modal__description"></p>
+            </div>
+        </div>
+    </div>
+</template>
+
+</body>
+</html>
