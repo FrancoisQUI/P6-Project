@@ -1,5 +1,8 @@
 @use 'variables';
-
+@use 'header';
+@use 'best_movie_pres';
+@use 'movie_sections';
+@use 'modal';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -20,10 +23,6 @@ body {
   user-select: none;
 }
 
-@use 'header';
-@use 'best_movie_pres';
-@use 'movie_sections';
-@use 'modal';
 
 
 
