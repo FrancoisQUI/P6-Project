@@ -50,10 +50,7 @@ async function CreateCategoryMoviesElement(apiUrl, genre) {
                 /* Récupère toutes les informations du film*/
                 fetch(film.url)
                     .then(response => response.json())
-                    .then(data => {
-                        generateMovieCard(data, filmContainer)
-                        }
-                    )
+                    .then(data => generateMovieCard(data, filmContainer))
             }
         })
     body.appendChild(section)
@@ -131,8 +128,9 @@ function showModal(evt) {
     }
 }
 
-async function GenerateMovieSectionsButtons(){
+async function generateMovieSectionsButtons(){
     const sections = document.querySelectorAll(".film-group .container")
+
     for (const section of sections) {
         const filmContainer = section.querySelector(".film-container")
         const left = document.createElement("div")
@@ -161,5 +159,5 @@ for (const genre of FAVORITES_MOVIE_GENRE) {
     CreateCategoryMoviesElement(API_URL, genre).then(genre => console.log(genre + "computed"))
 }
 
-GenerateMovieSectionsButtons().then(() => console.log("arrows - generated"))
+generateMovieSectionsButtons().then(() => console.log("arrows - generated"))
 
