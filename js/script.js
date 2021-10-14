@@ -29,6 +29,7 @@ async function CreateCategoryMoviesElement(apiUrl, genre) {
     const template = document.querySelector("#film-group-section-template")
     const section = document.importNode(template.content, true)
     const filmContainer = section.querySelector(".film-container")
+
     section.querySelector("section").id = genre
     section.querySelector(".film-group_title").innerHTML = genre
 
@@ -70,7 +71,6 @@ async function CreateCategoryMoviesElement(apiUrl, genre) {
         destDiv.appendChild(card)
     }
 }
-
 
 function showModal(evt) {
     //info-url : evt.target.offsetParent.dataset.url
